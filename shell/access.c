@@ -15,14 +15,18 @@
 
 int main (void)
 {
-	if (access("/path/to/file", R_OK)== 0)
-}
-else
-{
+	const char* path = "/path/to/access.c";
 
-	perror("access");
-}
+	int resu = access(path, F_OK);
 
-return (0);
-}
+	if (resu == 0)
+	{
+		printf("the file access by success \n");
+	}
+	else if (resu != 0)
+	{
+		printf("file not access by success\n");
+	
 
+	return (0);
+}

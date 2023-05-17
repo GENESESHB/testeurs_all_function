@@ -10,14 +10,17 @@
 // creation of new file , opening , reading, writing data  in a file closing a file
 
 
-"OPEN_FILE"
+
 // steps for proccessing a file 
 // 1.declare a file pointer variable
 // 2.open a file using fopen()
 // 3.proccess the file using the suitable function
 // 4.close the file using fclose()
 
-int main()
+/**
+ * main - return 0 if the p_w
+ */
+int main(void)
 {
 	FILE *opf;
 	opf = fopen("filename.txt", "W");
@@ -33,12 +36,16 @@ int main()
 }
 
 
-"read the cantant in the file lik a 'CAT'"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int main()
+/**
+ * main - return the value 0 for success process
+ */
+
+int main(void)
 {
 	FILE *filename;
 	//pointer variable (1steps) for handling files in C
@@ -60,23 +67,25 @@ int main()
 #define MAX_ARGS 10
 
 /**
+ * main - return the value 0 for success process
  *strtok - use strtok to split input into tokens separated by spaces
 */
+
 int main(void)
 {
 	char input[100];
-	scanf("%99[^\n], input);
+	scanf("%99[^\n]", input);
 
 	char *token;
 	char *args[MAX_ARGS];
 	int num_args = 0;
 
 	token = strtok(input, " ");
-	while (toke != NULL && num_args < MAX_ARGS)
+	while (token != NULL && num_args < MAX_ARGS)
 	{
 		args[num_args] = token;
 		num_args++;
-		token = strtok(NULL, " ")
+		token = strtok(NULL, " ");
 	}
 
 	printf("input tokens:\n");
