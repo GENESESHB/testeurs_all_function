@@ -7,9 +7,21 @@
 
 int main(void)
 {
-	char *input = getline("hasssan entre the line: ");
+	char *line = NULL;
 
-	printf("dakhalti: %s\n", input);
-	free(input);
+	size_t bufsize = 0;
+	ssize_t bytesRead = getline(&line, &bufsize, stdin);
+
+	if (bytesRead == -1)
+	{
+		printf("ErroR\n");
+	}
+	else
+	{
+		printf("read line: %s", line);
+	}
+
+	free(line);
+	
 	return (0);
 }

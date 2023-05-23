@@ -10,13 +10,13 @@
 
 int main(void)
 {
-	char str[] = "hassan boudraa is a teacher for lettle kids";
-	char *token = strtok(str, " ");
+	char str[] = "hassan boudraa is, a ,teacher, , for ( lettle -  _  kids";
+	char *token = strtok(str, ",");
 
 	while (token != NULL)
 	{
 		printf("%s\n", token);
-		token = strtok(NULL, " ");
+		token = strtok(NULL, ",");
 	}
 
 	return (0);
